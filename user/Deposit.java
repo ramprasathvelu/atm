@@ -1,5 +1,6 @@
 package user;
 
+import admin.Logs;
 import java.util.Scanner;
 
 public class Deposit {
@@ -10,6 +11,7 @@ public class Deposit {
         int a = sc.nextInt();
         if(a % 100 == 0){
             b += a;
+            Logs.addLog("User Deposited: "+a);
         }
         else{
             System.out.println("Deposit amount must be multiple of 100");

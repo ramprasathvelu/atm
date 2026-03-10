@@ -12,7 +12,6 @@ public class Admin {
 
         Balance b = new Balance();
         Load l = new Load();
-        Logs lg = new Logs();
 
         System.out.print("Enter Admin ID: ");
         String id = sc.next();
@@ -36,7 +35,7 @@ public class Admin {
                     this.atmBalance += l.L();
                 }
                 else if(op==3){
-                    lg.Lg();
+                    Logs.showLogs();
                 }
                 else if(op==4){
                     System.out.println("Exited From Admin");

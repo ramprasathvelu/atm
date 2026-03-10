@@ -1,5 +1,5 @@
 package user;
-import admin.Admin;
+import admin.*;
 import java.util.Scanner;
 public class Withdraw {
     public int W(int b){
@@ -11,14 +11,17 @@ public class Withdraw {
             if(a % 100 == 0 && a <= b){
                 b -= a;
                 Admin.atmBalance-=a;
+                Logs.addLog("User withdrew: " + amount);
             }
             else{
                 System.out.println("Invalid amount or insufficient balance");
+                Logs.addLog("Failed withdrawal attempt: " + amount);
             }
         }
         else{
             System.out.println("Sorry! Limited Amount in ATM or Empty");
             System.out.println("TRY AGAIN LATER");
+            Logs.addLog("Failed withdrawal attempt: " + amount);
         }
         return b;
     }
