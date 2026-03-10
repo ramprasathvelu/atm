@@ -3,7 +3,7 @@ import java.util.*;
 import user.User;
 public class main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in) ;
         while(true){
             System.out.println("___________ATM___________");
             System.out.println("1.Admin");
