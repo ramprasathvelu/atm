@@ -1,7 +1,7 @@
 import admin.Admin;
 import java.util.*;
 import user.User;
-public class main1 {
+public class main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         while(true){
