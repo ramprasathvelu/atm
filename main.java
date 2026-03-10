@@ -4,6 +4,8 @@ import user.User;
 public class main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in) ;
+        Admin a = new Admin();
+        User u = new User();
         while(true){
             System.out.println("___________ATM___________");
             System.out.println("1.Admin");
@@ -12,11 +14,9 @@ public class main {
             System.out.print("Enter NUmber: ");
             int op = sc.nextInt();
             if(op==1){
-                Admin a = new Admin();
                 a.A();
             }
             else if(op==2){
-                User u = new User();
                 u.U();
             }
             else if(op==3){
