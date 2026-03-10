@@ -3,19 +3,14 @@ package user;
 import java.util.Scanner;
 
 public class User {
-
     public void U(){
-
         Scanner sc = new Scanner(System.in);
-
         int pin = 7777;
         int balance = 1000;
-
         CheckBalance c = new CheckBalance();
         Deposit d = new Deposit();
         Withdraw w = new Withdraw();
         PinChange p1 = new PinChange();
-
         while(true){
 
             System.out.println("\n---- User Mode ----");
@@ -24,10 +19,8 @@ public class User {
             System.out.println("3. Withdraw");
             System.out.println("4. Pin Change");
             System.out.println("5. Exit");
-
             System.out.print("Enter option: ");
             int op = sc.nextInt();
-
             if(op == 1){
 
                 System.out.print("Enter PIN: ");
