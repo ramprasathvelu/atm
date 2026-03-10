@@ -7,9 +7,10 @@ public class Withdraw {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter amount to withdraw: ");
         int a = sc.nextInt();
-        if (ad.atmBal()>=a) {
+        if (Admin.atmBalance>=a) {
             if(a % 100 == 0 && a <= b){
                 b -= a;
+                Admin.atmBalance-=a;
             }
             else{
                 System.out.println("Invalid amount or insufficient balance");

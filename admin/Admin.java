@@ -3,10 +3,10 @@ import java.util.*;
 public class Admin {
     String adminID = "ramprasath";
     int password = 2829;
-    int atmBalance = 10000;
-    public int atmBal(){
-        return this.atmBalance;
-    }
+    public static int atmBalance = 10000;
+    // public int atmBal(){
+    //     return this.atmBalance;
+    // }
     public void A(){
         Scanner sc = new Scanner(System.in);
 
