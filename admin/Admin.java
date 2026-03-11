@@ -36,6 +36,7 @@ public class Admin {
                 }
                 else if(op==3){
                     Logs.showLogs();
+                    TransactionLogger.showMongoDB();
                 }
                 else if(op==4){
                     System.out.println("Exited From Admin");

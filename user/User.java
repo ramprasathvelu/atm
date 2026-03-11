@@ -8,7 +8,7 @@ public class User {
         Scanner sc = new Scanner(System.in);
         int pin = 7777;
         int balance = 1000;
-
+        int attempt = 0;
         CheckBalance c = new CheckBalance();
         Deposit d = new Deposit();
         Withdraw w = new Withdraw();
@@ -21,7 +21,7 @@ public class User {
         int ePass = sc.nextInt();
         String user = ul.UL(eUser,ePass);
         if(user != null){
-            while(true){
+            while(true && attempt<3){
     
                 System.out.println("\n---- "+user+" ----");
                 System.out.println("1. Check Balance");
@@ -37,10 +37,12 @@ public class User {
                     int p = sc.nextInt();
     
                     if(p == pin){
-                        c.C(balance);
+                        c.C(balance,user);
                     }
                     else{
+                        attempt++;
                         System.out.println("Invalid PIN");
+                        System.out.println("Attempt "+attempt+"/3");
                     }
     
                 }
@@ -51,11 +53,13 @@ public class User {
                     int p = sc.nextInt();
     
                     if(p == pin){
-                        balance = d.D(balance);
+                        balance = d.D(balance,user);
                         System.out.println("Updated Balance: " + balance);
                     }
                     else{
+                        attempt++;
                         System.out.println("Invalid PIN");
+                        System.out.println("Attempt "+attempt+"/3");
                     }
     
                 }
@@ -66,11 +70,13 @@ public class User {
                     int p = sc.nextInt();
     
                     if(p == pin){
-                        balance = w.W(balance);
+                        balance = w.W(balance,user);
                         System.out.println("Updated Balance: " + balance);
                     }
                     else{
+                        attempt++;
                         System.out.println("Invalid PIN");
+                        System.out.println("Attempt "+attempt+"/3");
                     }
     
                 }
@@ -81,10 +87,12 @@ public class User {
                     int p = sc.nextInt();
     
                     if(p == pin){
-                        pin = p1.P(pin);
+                        pin = p1.P(pin,user);
                     }
                     else{
+                        attempt++;
                         System.out.println("Invalid PIN");
+                        System.out.println("Attempt "+attempt+"/3");
                     }
     
                 }

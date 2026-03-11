@@ -3,7 +3,7 @@ package user;
 import admin.Logs;
 import java.util.Scanner;
 public class PinChange {
-    public int P(int oldPin){
+    public int P(int oldPin,String user){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter New PIN: ");
         int pnew = sc.nextInt();
