@@ -1,4 +1,5 @@
 package user;
+import db.TransactionLogger;
 import admin.Admin;
 import admin.Logs;
 public class CheckBalance {

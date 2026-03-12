@@ -1,4 +1,5 @@
 package user;
+import db.TransactionLogger;
 import admin.*;
 import java.util.Scanner;
 public class Withdraw {
@@ -11,7 +12,7 @@ public class Withdraw {
             if(a % 100 == 0 && a <= b){
                 b -= a;
                 Admin.atmBalance-=a;
-                Logs.addLog("User withdrew: " + amount);
+                Logs.addLog("User withdrew: " + a);
                 TransactionLogger.logTransaction(user,"Withdraw",a,Admin.atmBalance);
             }
             else{

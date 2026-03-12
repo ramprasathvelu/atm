@@ -2,6 +2,7 @@ package user;
 
 import admin.Admin;
 import admin.Logs;
+import db.TransactionLogger;
 import java.util.Scanner;
 
 public class Deposit {
